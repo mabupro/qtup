@@ -1,5 +1,5 @@
 name: "Setup and install"
-description: "Common setup seteps for Actions"
+description: "Common setup steps for Actions"
 
 inputs:
   node-version:
@@ -15,12 +15,12 @@ runs:
     - name: Setup pnpm
       uses: pnpm/action-setup@v4
       with:
-        version: ${{inputs.pnpm-version}}
+        version: ${{ inputs.pnpm-version }}
 
-    - name: Setup "Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{inputs.node version}}
+        node-version: ${{ inputs.node-version }}
         cache: "pnpm"
 
     - name: Install dependencies
