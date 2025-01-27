@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex h-screen items-center justify-center">
         <div className="flex flex-col items-center">
           <HelloUniverseLabel />
-          <p className="text-sm text-gray-500">{url}</p>
+          <p className="text-sm text-gray-500">{url} ooo</p>
         </div>
       </div>
     </main>
