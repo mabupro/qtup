@@ -10,7 +10,6 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <HelloUniverseLabel />
           <p className="text-sm text-gray-500">{url}</p>
-          <p>test</p>
         </div>
       </div>
     </main>
