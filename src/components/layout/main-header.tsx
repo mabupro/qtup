@@ -14,7 +14,7 @@ export function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isMenuHover, setIsMenuHover] = useState<boolean>(false);
   const [isTapMenuButton, setIsTapMenuButton] = useState<boolean>(false);
-  const [isCurtainAnimated, setIsCurtainAnimated] = useState<boolean>(true);
+  const [isCurtainAnimated, setIsCurtainAnimated] = useState<boolean>(false);
 
   const menuOpenIconSize = isMenuHover ? "20" : "25";
   const menuCloseIconSize = isMenuHover ? "25" : "20";
@@ -31,9 +31,10 @@ export function MainHeader() {
   // 幕のアニメーション終了を検知
   useEffect(() => {
     setIsCurtainAnimated(false);
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setIsCurtainAnimated(true);
     }, 600);
+    return () => clearTimeout(timeout);
   }, [isMenuOpen]);
 
   return (
