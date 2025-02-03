@@ -1,5 +1,7 @@
 import "@/styles/globals.css";
 
+import { MainHeader } from "@/components/layout/main-header";
+
 type RootLayoutProps = {
   children: React.ReactNode;
 };
@@ -12,7 +14,10 @@ export const metadata = {
 export default function RootLayout(props: RootLayoutProps) {
   return (
     <html lang="ja">
-      <body className="">{props.children}</body>
+      <body className="">
+        <MainHeader />
+        {props.children}
+      </body>
     </html>
   );
 }
