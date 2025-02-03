@@ -33,11 +33,11 @@ export function MainHeader() {
     setIsCurtainAnimated(false);
     setTimeout(() => {
       setIsCurtainAnimated(true);
-    }, 500);
+    }, 600);
   }, [isMenuOpen]);
 
   return (
-    <div className="h-22 relative overflow-hidden drop-shadow-xl">
+    <div className="h-22 relative overflow-hidden">
       {/* 背景（幕） */}
       <div
         className={`absolute left-0 top-0 h-full w-full bg-violet-700 transition-transform duration-500 ease-in-out ${
@@ -49,7 +49,7 @@ export function MainHeader() {
       <div className="relative z-10 flex justify-between px-7">
         <div className={AKsharFont.className}>
           <p
-            className={`my-6 text-4xl font-extrabold transition-all duration-500 ease-in-out ${
+            className={`pointer-events-none my-6 text-4xl font-extrabold transition-all duration-500 ease-in-out ${
               isMenuOpen ? "text-white" : "text-violet-700"
             }`}
           >
